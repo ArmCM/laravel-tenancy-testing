@@ -1,0 +1,41 @@
+{
+    "name": "armcm/laravel-tenancy-testing",
+    "description": "Laravel testing utilities for multi-tenant applications",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "testing", "multitenancy", "tenant"],
+    "authors": [
+    {
+      "name": "Armando Monreal",
+      "email": "acalderon.root@gmail.com"
+    }
+  ],
+    "require": {
+        "php": "^8.1 || ^8.2 || ^8.3",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/database": "^10.0|^11.0|^12.0",
+        "illuminate/filesystem": "^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ArmCm\\LaravelTenancyTesting\\": "src/"
+        }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "ArmCm\\LaravelTenancyTesting\\Tests\\": "tests",
+        "ArmCm\\LaravelTenancyTesting\\Tests\\Database\\Migrations\\": "tests/database/migrations"
+      }
+    },
+    "scripts": {
+      "test": "vendor/bin/phpunit"
+    },
+    "config": {
+      "sort-packages": true
+    },
+    "minimum-stability": "beta"
+}
