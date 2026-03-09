@@ -85,6 +85,28 @@ class TenantTest extends LandlordTestCase
 ```
 ## Configuration
 
+### Registering the Service Provider
+Laravel 11+ Add the service provider to your `bootstrap/providers.php`:
+
+```php
+<?php
+
+return [
+    App\Providers\AppServiceProvider::class,
+    ArmCm\LaravelTenancyTesting\ServiceProvider::class,
+];
+```
+
+Laravel 10 Add the service provider to your `config/app.php`:
+
+```php
+'providers' => [
+    // Other Service Providers...
+    
+    ArmCm\LaravelTenancyTesting\ServiceProvider::class,
+],
+```
+
 ### Publishing Configuration File
 You can publish the configuration file to customize the package behavior:
 The package uses the following configuration file to override:
@@ -126,27 +148,6 @@ return [
 ];
 ```
 
-### Registering the Service Provider
-Laravel 11+ Add the service provider to your `bootstrap/providers.php`:
-
-```php
-<?php
-
-return [
-    App\Providers\AppServiceProvider::class,
-    ArmCm\LaravelTenancyTesting\ServiceProvider::class,
-];
-```
-
-Laravel 10 Add the service provider to your `config/app.php`:
-
-```php
-'providers' => [
-    // Other Service Providers...
-    
-    ArmCm\LaravelTenancyTesting\ServiceProvider::class,
-],
-```
 ### Using Custom Tenant Model
 If you have a custom tenant model: `config/tenancy-testing.php`
 ```php
